@@ -1,7 +1,13 @@
 import openai
 
-openai.api_key = "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"
+from dotenv import load_dotenv
+import os
 
+# Load environment variables
+load_dotenv()
+
+# Retrieve API key
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def get_ielts_examiner_response(prompt: str):
     """

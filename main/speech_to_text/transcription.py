@@ -2,11 +2,14 @@ import io
 import os
 import pyaudio
 from google.cloud import speech
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Set up Google Cloud credentials
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = (
-    "C:\\Users\\User\\Documents\\IELTS-Speaking-Tool\\credentials.json"
-)
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.getenv("GOOGLE_CLOUD_CREDENTIALS")
+
 
 # Audio stream settings
 RATE = 16000  
