@@ -1,0 +1,6 @@
+fastapi
+flask
+fpdf
+google-cloud-speech
+openai
+pyaudio
